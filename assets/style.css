@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+        display: flex;
+        justify-content: center;
+        height: 120px;
+        background-color: #013d61;
+      }
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    
+  }
+  .logo h1{
+    color: white;
+    font-size: 60px;
+  }
+  .logo h2{
+    color: #c25c36;
+    font-size: 60px;
+  }
+  .menu{
+    display: flex;
+    align-items: center;
+}
+/* Colocando a tag UL e LI que estão dentro de NAV com margin e 
+padding 0, além de remover a lista */
+nav ul,
+nav li {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+/* Deixando os menu um ao lado do outro, com a propriedade FLEX */
+nav ul{
+   display: flex;
+}
+
+/* Decorando os links dentro do NAV. Definindo que ficara maiusculo, sem sublinado
+sua cor e do tipo block */
+nav a{
+   display: block;
+   text-decoration: none;
+   padding: 15px 15px 5px 15px;
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 22px;
+}
+
+/* Definindo o link ativo e o hover ao passar o mouse */
+nav .active a,
+nav a:hover{
+   border-bottom: 6px solid #c25c36;
+   color: #c25c36;
+   
+   transform: scale(1.05);
+  
+}
+#comprar{
+  background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    
+}
+.circulo_img{
+    margin-top: 40px;
+    border-radius: 50%;
+  
+}
+/* #banner{
+    display: flex;
+  justify-content: center;
+  
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px; */
+
+#sobre_nos p{
+    width: 700px;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    text-align: justify;
+  
+}
+#sobre_nos h1{
+  border-bottom: 3px solid gray;
+    color: rgb(0, 0, 0);
+    font-size: 43px;
+    margin-bottom: 30px;
+}
+.produtos{
+    background-color:#ffffff;
+    display: flex;
+   justify-content: space-around;
+   cursor: pointer;
+   max-width: 100%;
+}
+.produtos div{
+    padding: 10px;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 290px;
+  height: 390px;
+  margin-bottom: 70px;
+margin-top: 70px;
+  text-align: justify;
+  
+}
+.img1{
+    position: relative;
+    top: 10px;
+}
+.produtos img{
+    border-radius: 55px;
+    padding-bottom: 13px;
+    width: 210px;
+}
+/* .produtos img:hover{
+  transform: scale(1.05);
+} */
+.card{
+  border: 0.5px solid rgba(128, 128, 128, 0.425);
+  border-radius: 40px;
+  
+}
+.card:hover{
+  transform: scale(1.05);
+ box-shadow:  2px 4px 23px #c25c36;
+}
+.valor_inteiro{
+  color: red;
+  font-size: 20px;
+  text-decoration: line-through;
+}
+.valor_desconto{
+  color: green;
+  font-size: 24px;
+}
+.card p{
+  font-size: 22px;
+}
+.carrinho{
+  
+  width: 800px;
+  align-items: center;
+}
+.area_carrinho{
+ margin-bottom: 10px;
+  justify-content: baseline;
+  align-items: center;
+}
+.itens_carrinho{
+
+  justify-content: center;
+ align-items: center;
+}
+.tabela_carrinho{
+ 
+  display: flex;
+margin: 30px;
+width: 90%;
+}
+.corpo_carrinho{
+ width: 100%;
+}
+
+ tr td{
+  padding: 20px;
+  font-size: 20px
+}
+.titulo_carrinho{
+  font-weight: bolder;
+  color: white;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: #013d61;
+  border-radius: 10px;
+}
+.branco-text{
+  color: green;
+}
+.branco-text:hover{
+  color: rgb(0, 0, 0);
+  transform: scale(1.09);
+}
+.red-text{
+  color: red;
+  
+}
+.red-text:hover{
+  color: red;
+  transform: scale(1.09);
+}
+.btn_finalizar{
+  background-color: #013d61;
+  color: #ffffff;
+  padding: 17px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+   font-weight: bolder;
+   cursor: pointer;
+}
+
+.btn_finalizar:hover{
+  background-color: #c25c36;
+  align-items: center;
+  transform: scale(1.05);
+  font-weight: bolder;
+}
+.total_pedido{
+  align-items: center;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+}
+#sobre_nos{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap:30px;
+  padding-bottom: 40px;
+  background-color: #b9a29a;
+}
+.rodape{
+  background-color: #c25b36e1;
+  color: white;
+  height: auto;
+  width: 100%;
+  font-size: 14px;
+  font-family: helvetica;
+
+}
+.rodape a{
+  text-decoration: none;
+  color: white;
+}
+.rodape p{
+  margin-bottom: 5px;
+}
+.rodape-div{
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  margin: auto;
+  text-align: justify;
+  margin-left: 90px;
+  align-items: center;
+  padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+  display: flex;
+  width: calc(100% / 4 - 20px);
+  padding: 10px;
+}
+.rodape span{
+  font-size: 20px;
+  color: white;
+}
+.rodape-direitos{
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}
+/*mobile*/
+@media (max-width: 768px) {
+  .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+      width: calc(50% - 20px);
+      padding: 10px;
+  }
+  .rodape-div{
+      padding: 60px 0px 40px 0px;
+  }
+}
+.rodape-div-1-coluna a:hover, .rodape-div-1-coluna p:hover,
+.rodape-div-2-coluna a:hover, .rodape-div-2-coluna p:hover,
+.rodape-div-3-coluna a:hover, .rodape-div-3-coluna p:hover,
+.rodape-div-4-coluna a:hover, .rodape-div-4-coluna p:hover{
+  transform: scale(1.05);
+}
+.rodape-div-1-coluna a, .rodape-div-1-coluna p,
+.rodape-div-2-coluna a, .rodape-div-2-coluna p,
+.rodape-div-3-coluna a, .rodape-div-3-coluna p,
+.rodape-div-4-coluna a, .rodape-div-4-coluna p{
+  margin-top: 10px;
+}

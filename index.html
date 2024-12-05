@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <title>G3 Store</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>G3</h1><br>
+                <H2>STORE</H2>
+            </div>
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li class="active">
+                            <a  href="#produtos">Produtos</a>
+                        </li>
+                        <li>
+                            <a href="">Clientes</a>
+                        </li>
+                        <li>
+                            <a href="">Papelaria</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fas fa-grip-lines-vertical"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/g3storebr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram"><i class="fab fa-instagram icone_instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fc%2F558594441198%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZTr-zWCp4Ip5xaN3TqCb51pUhT19t3dhgeD0yyXyaDJeUFaBbc3wMXWlw_aem_-_ioFJ2EGSVtQzkK6MLXiA&e=AT1rjbl3jwvdrUBaABRRUSfwNU0NFHwhT8UFn1WxaJlU1S7EJoM1e_RBUa9-ezkXOs4aMuUCWt6KSKQ6Kf6iaSsUhySDIAMFoyhP2MY" title="Entre em contato"><i class="fas fa-phone"></i></a>
+                        </li>
+                        <li>
+                            <a href="#comprar"><i class="fas fa-shopping-cart" title="faça seu pedido"></i></i></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+    <section class="produtos" id="produtos">
+        
+        <div class="card">
+            <h1>Biblia Sagrada</h1>
+            <p>Letra Jumbo</p>
+          <a href="#comprar"> <img class="img1" src="./assets/imagens/biblia1.png" alt="biblia1" width="200px"></a> 
+            <span class="valor_inteiro"> de R$ 76,00</span>
+          <p>Por apenas<span class="valor_desconto"> R$ 69,99</span></p>
+        </div>
+        <div class="card">
+            <h1>Biblia Sagrada
+            </h1>
+            <p>Anote Ilustrada</p>
+           <a href="#comprar"> <img class="img1" src="./assets/imagens/biblia2.png" alt="biblia1" width="200px"></a>
+            <span class="valor_inteiro"> de R$ 86,00</span>
+          <p>Por apenas<span class="valor_desconto"> R$ 79,99</span></p>
+        </div>
+        <div class="card">
+            <h1>Biblia Sagrada</h1>
+            <p>Letra Jumbo</p>
+           <a href="#comprar"> <img class="img1" src="./assets/imagens/biblia1.png" alt="biblia1" width="200px"></a>
+            <span class="valor_inteiro"> de R$ 76,00</span>
+          <p>Por apenas<span class="valor_desconto"> R$ 69,99</span></p>
+        </div>
+        <div class="card">
+            <h1>Biblia Sagrada</h1>
+            <p>Infantis</p>
+           <a href="#comprar"> <img class="img1" src="./assets/imagens/biblia4.png" alt="biblia1" width="200px">  </a>
+           <span class="valor_inteiro"> de R$ 66,00</span>
+          <p>Por apenas<span class="valor_desconto"> R$ 59,99</span></p>
+
+        </div>
+        
+
+    </section>
+
+    <section id="comprar">
+       
+        <script type="text/javascript" src="./script.js"></script>
+		<div class="area_carrinho">
+            <h1 class="titulo_carrinho">Faça seu pedido</h1>
+			<form>
+				<div class="carrinho">
+						<div class="itens_carrinho">
+							<!-- PRODUTOS -->
+							<table class="tabela_carrinho">
+								<tbody id="carrinho" class="corpo_carrinho">
+									<tr class="center" id="produto1">
+										<td><img width="100px" src="./assets/imagens/biblia1.png"></td>
+										<td>Biblia - Letra Jumbo<br>R$69,99</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(1)" class="material-icons branco-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade1">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(1)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<td>
+											Total<br>R$<span id="total1">00,00</span>
+										</td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td><i onclick="removerProduto(1)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									</tr>
+									<tr id="produto2" id="produto2">
+										<td><img width="100px" src="./assets/imagens/biblia2.png"></td>
+										<td>Anote Ilustrada<br>R$79,99</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(2)" class="material-icons branco-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade2">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(2)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<td>
+											Total<br>R$<span id="total2">00,00</span>
+										</td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td><i onclick="removerProduto(2)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									</tr>
+									<tr id="produto3" id="produto3">
+										<td><img width="100px" src="./assets/imagens/biblia4.png"></td>
+										<td>Biblia Infantil<br>R$59,99</td>
+										<!-- ADICIONAR AO CARRINHO -->
+										<td><i onclick="adicionarItem(3)" class="material-icons branco-text" style="cursor: pointer;">add_circle</i></td>
+										<td>
+											<p id="quantidade3">0</p>
+										</td>
+										<!-- REMOVER DO CARRINHO -->
+										<td><i onclick="removerItem(3)" class="material-icons red-text" style="cursor: pointer;">remove_circle</i></td>
+										<!-- REMOVER PRODUTO DA LISTA -->
+										<td>Total<br>R$<span id="total3">00,00</span></td>
+										<td><i onclick="removerProduto(3)" class="material-icons blue-text text-darken-1" style="cursor: pointer">delete</i></td>
+									
+                                    </tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- VALOR TOTAL DOS ITENS ADICIONADOS AO CARRINHO -->
+						<div class=" total_pedido s12 l6 offset-l6">
+							<h2 class="blue-text text-darken-1 flow-text">Total do Pedido: R$<span id="valorTotalCompra">00,00</span></h2>
+                            <div class="">
+                            <button class="btn_finalizar waves-light waves-effect red white-text" onclick="finalizarCompra()">FINALIZAR PEDIDO</button>
+                        </div>
+						</div>
+				
+					<!-- FINALIZA A COMPRA E RESETA O CARRINHO -->
+					<div class=" s12 l4 offset-l4">
+						
+					</div>
+				</div>
+			</form>
+    </section> 
+        <section id="sobre_nos">
+            <div>
+                <img class="circulo_img" src="./assets/imagens/casal.png" alt="nascimento_jesus" width="300">
+            </div>
+            <div class="nascimento-jc">
+                <h1 id="nascimento_titulo">Sobre nós</h1>
+             <p>Um casal cristão, movido pela fé e pelo desejo de compartilhar a Palavra de Deus, decidiu abrir um empreendimento dedicado à venda de materiais bíblicos.<br></p><br>
+            <p>Com uma visão de servir à comunidade e proporcionar acesso a recursos que ajudam no crescimento espiritual, eles começaram sua jornada oferecendo Bíblias, livros cristãos, materiais de estudo e presentes religiosos.<br></p><br>
+            <p>Cada item foi cuidadosamente selecionado para apoiar a fé de seus clientes, com o intuito de fortalecer o relacionamento com Deus e com a igreja.</p><br>
+            <p>Além de oferecer produtos de qualidade, o casal também busca criar um ambiente acolhedor, onde todos possam se sentir inspirados e apoiados em sua caminhada cristã.</p><br>
+            <p>O negócio é mais do que um simples empreendimento, é uma missão de levar a luz e a sabedoria divina a todos que buscam crescer espiritualmente.<br></p>
+            </div>
+        
+    </section>
+</main>
+<footer class="rodape" id="contato">
+    <div class="rodape-div">
+        <div class="rodape-div-1">
+            <div class="rodape-div-1-coluna">
+                <!-- elemento -->
+                <span><b>Endereço</b></span>
+              <a href="https://www.google.com/maps/place/R.+23,+288+-+Jereissati+I,+Maracana%C3%BA+-+CE,+61900-480/@-3.8756036,-38.6134882,17z/data=!3m1!4b1!4m6!3m5!1s0x7c7530ad83365bf:0xab3fd61818ea592f!8m2!3d-3.8756036!4d-38.6134882!16s%2Fg%2F11c5m8ngmx?entry=ttu&g_ep=EgoyMDI0MTExMy4xIKXMDSoASAFQAw%3D%3D"> <p>Rua 23, 288 - Jereissati I, Maracanaú -CE</p></a> 
+            </div>
+        </div>
+
+        <div class="rodape-div-2">
+            <div class="rodape-div-2-coluna">
+                <!-- elemento -->
+                <span><b>Contatos</b></span>
+                <p>contato@na.na</p>
+                <p>85 991058210</p>
+            </div>
+        </div>
+
+        <div class="rodape-div-3">
+            <div class="rodape-div-3-coluna">
+                <!-- elemento -->
+                <span><b>Links</b></span>
+                <p><a href="https://www.instagram.com/g3storebr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" title="Instagram">Instagram <i class="fab fa-instagram icone_instagram"></i></a></p>
+                <p><a href="https://l.instagram.com/?u=https%3A%2F%2Fwa.me%2Fc%2F558594441198%3Ffbclid%3DPAZXh0bgNhZW0CMTEAAaZTr-zWCp4Ip5xaN3TqCb51pUhT19t3dhgeD0yyXyaDJeUFaBbc3wMXWlw_aem_-_ioFJ2EGSVtQzkK6MLXiA&e=AT1rjbl3jwvdrUBaABRRUSfwNU0NFHwhT8UFn1WxaJlU1S7EJoM1e_RBUa9-ezkXOs4aMuUCWt6KSKQ6Kf6iaSsUhySDIAMFoyhP2MY" title="Entre em contato">WhatsApp <i class="fas fa-phone"></i></a></p>
+            </div>
+        </div> 
+
+        <div class="rodape-div-4">
+            <div class="rodape-div-4-coluna">
+                <!-- elemento -->
+                <span><b>Outros</b></span>
+                <p>Políticas de Privacidade</p>
+            </div>
+        </div>
+
+    </div>
+    <p class="rodape-direitos">Copyright © 2024 – Todos os Direitos Reservados.</p>
+</footer>
+</body>
+</html>
