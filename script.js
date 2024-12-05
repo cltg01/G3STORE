@@ -59,8 +59,34 @@ function valorCompra() {
 }
 
 // Finalizar a compra e zerar os valores
-function finalizarCompra() {
-	var nome = document.getElementById('nome').innerHTML;
-	alert('Obrigada pela compra, ' + nome + '!');
-	document.location.reload(true);
+function enviarPedidoWhatsApp() {
+    // Número de telefone para receber o pedido
+    const telefone = "5585991900162"; 
+
+    // Detalhes do pedido
+    let mensagem = "Olá, gostaria de finalizar meu pedido:\n\n";
+
+    // Iterar pelos itens do carrinho
+    const itensCarrinho = document.querySelectorAll("#carrinho tr");
+    itensCarrinho.forEach((item) => {
+        const nomeProduto = item.querySelector("td:nth-child(2)").innerText; // Nome do produto
+        const quantidade = item.querySelector("td:nth-child(4) p").innerText; // Quantidade
+        const totalProduto = item.querySelector("td:nth-child(6) span").innerText; // Total do produto
+
+        if (parseInt(quantidade) > 0) {
+            mensagem += `- ${nomeProduto}\n  Quantidade: ${quantidade}\n  Total: R$${totalProduto}\n\n`;
+        }
+    });
+
+    // Adicionar o total geral
+    const totalGeral = document.getElementById("valorTotalCompra").innerText;
+    mensagem += `Total do Pedido: R$${totalGeral}\n`;
+
+    // URL específica para o WhatsApp Web
+    const url = `https://web.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+
+    // Abrir o WhatsApp Web em uma nova aba
+    window.open(url, "_blank");
 }
+
+
