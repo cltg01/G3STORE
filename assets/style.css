@@ -34,6 +34,14 @@ header{
     display: flex;
     align-items: center;
 }
+.menu-toggler {
+  display: none; /* Esconde o botão em telas maiores */
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
 /* Colocando a tag UL e LI que estão dentro de NAV com margin e 
 padding 0, além de remover a lista */
 nav ul,
@@ -139,6 +147,7 @@ margin-top: 70px;
   border-radius: 40px;
   
 }
+
 .card:hover{
   transform: scale(1.05);
  box-shadow:  2px 4px 23px #c25c36;
@@ -311,3 +320,142 @@ width: 90%;
  margin-bottom: 15px;
  font-size: 40px;
 }
+
+@media (max-width: 500px) {
+  .produtos{
+    background-color:#ffffff;
+    display: list-item;
+   justify-content: space-around;
+   cursor: pointer;
+   max-width: 100%;
+    
+  }
+  .card p{
+    font-size: 22px;
+    color: #ffffff;
+  }
+  .card{
+    border: 0.5px solid rgba(128, 128, 128, 0.425);
+    border-radius: 40px;
+    background-color: #013d61;
+    
+  }
+  .card h1{
+    color: #ffffff;
+  }
+}
+
+@media (max-width: 1200px ){
+  .produtos{
+    background-color:#ffffff;
+   justify-content: space-around;
+   cursor: pointer;
+   max-width: 100%;
+    
+  }
+  header{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    background-color: #c25c36;
+  }
+  .logo h1{
+    color: white;
+    font-size: 60px;
+  }
+  .logo h2{
+    color: #013d61;
+    font-size: 60px;
+  }
+  nav .active a,
+nav a:hover{
+   border-bottom: 6px solid #013d61;
+   color: #013d61;
+   
+   transform: scale(1.05);
+  
+}
+.card p{
+  font-size: 22px;
+  color: black;
+}
+.card h1{
+  color: black;
+}
+.produtos img{
+  border-radius: 5px;
+  padding-bottom: 12px;
+  width: 200px;
+  height: 230px;
+}
+/* .produtos img:hover{
+transform: scale(1.05);
+} */
+.card{
+border: 0.5px solid rgba(128, 128, 128, 0.425);
+border-radius: 0px;
+background-color: #ffffff;
+}
+
+.card:hover{
+transform: scale(1.05);
+box-shadow:  2px 4px 23px #013d61;
+}
+.produtos div{
+  padding: 10px;
+  display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 250px;
+height: 370px;
+margin-bottom: 50px;
+margin-top: 70px;
+text-align: justify;
+
+}
+#sobre_nos{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  gap:30px;
+  padding-bottom: 40px;
+  background-color: #000000;
+  width:  100%;
+}
+#sobre_nos p{
+  width: 700px;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-align: justify;
+
+}
+#sobre_nos h1{
+border-bottom: 3px solid gray;
+  color: #c25c36;
+  font-size: 43px;
+  margin-bottom: 30px;
+}
+}
+/* @media (max-width: 1060px){
+  #sobre_nos{
+    display: none;
+  }
+}
+@media (max-width: 1060px) {
+  .menu {
+      display: none; 
+      flex-direction: column;
+      padding: 10px;
+      border-radius: 5px;
+  }
+
+  .menu.show {
+      display: flex;
+  
+  }
+
+  .menu-toggler {
+      display: block;
+  }
+} */

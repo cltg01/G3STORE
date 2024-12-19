@@ -89,5 +89,10 @@ function enviarPedidoWhatsApp() {
     window.open(url, "_blank");
 }
 
+const toggler = document.getElementById('menu-toggler');
+    const menu = document.getElementById('menu');
 
+    toggler.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
 
