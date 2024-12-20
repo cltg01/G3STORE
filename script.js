@@ -60,39 +60,28 @@ function valorCompra() {
 
 // Finalizar a compra e zerar os valores
 function enviarPedidoWhatsApp() {
-    // Número de telefone para receber o pedido
-    const telefone = "5585991900162"; 
+	// Número de telefone para receber o pedido
+	const telefone = "5585991900162"; 
 
-    // Detalhes do pedido
-    let mensagem = "Olá, gostaria de finalizar meu pedido:\n\n";
+	// Detalhes do pedido
+	let mensagem = "Olá, gostaria de finalizar meu pedido:\n\n";
 
-    // Iterar pelos itens do carrinho
-    const itensCarrinho = document.querySelectorAll("#carrinho tr");
-    itensCarrinho.forEach((item) => {
-        const nomeProduto = item.querySelector("td:nth-child(2)").innerText; // Nome do produto
-        const quantidade = item.querySelector("td:nth-child(4) p").innerText; // Quantidade
-        const totalProduto = item.querySelector("td:nth-child(6) span").innerText; // Total do produto
+	// Simulação de itens (adicione sua lógica aqui)
+	mensagem += "- Produto A\n  Quantidade: 1\n  Total: R$50,00\n\n";
+	mensagem += "- Produto B\n  Quantidade: 2\n  Total: R$30,00\n\n";
 
-        if (parseInt(quantidade) > 0) {
-            mensagem += `- ${nomeProduto}\n  Quantidade: ${quantidade}\n  Total: R$${totalProduto}\n\n`;
-        }
-    });
+	// Adicionar o total geral
+	mensagem += `Total do Pedido: R$80,00\n`;
 
-    // Adicionar o total geral
-    const totalGeral = document.getElementById("valorTotalCompra").innerText;
-    mensagem += `Total do Pedido: R$${totalGeral}\n`;
+	// Detectar se o dispositivo é móvel
+	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-    // URL específica para o WhatsApp Web
-    const url = `https://web.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`;
+	// Definir a URL correta com base no dispositivo
+	const url = isMobile 
+		? `whatsapp://send?phone=${telefone}&text=${encodeURIComponent(mensagem)}` // App em mobile
+		: `https://web.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`; // Web em desktop
 
-    // Abrir o WhatsApp Web em uma nova aba
-    window.open(url, "_blank");
-}
+	// Abrir o link no WhatsApp
+	window.open(url, "_blank");}
 
-const toggler = document.getElementById('menu-toggler');
-    const menu = document.getElementById('menu');
-
-    toggler.addEventListener('click', () => {
-        menu.classList.toggle('show');
-    });
 
