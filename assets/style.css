@@ -437,11 +437,11 @@ border-bottom: 3px solid gray;
   margin-bottom: 30px;
 }
 }
-/* @media (max-width: 1060px){
+ @media (max-width: 1060px){
   #sobre_nos{
     display: none;
   }
-}
+} /*
 @media (max-width: 1060px) {
   .menu {
       display: none; 
