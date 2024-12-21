@@ -48,7 +48,6 @@ nav li {
 nav ul{
    display: flex;
 }
-
 /* Decorando os links dentro do NAV. Definindo que ficara maiusculo, sem sublinado
 sua cor e do tipo block */
 nav a{
@@ -82,15 +81,6 @@ nav a:hover{
     border-radius: 50%;
   
 }
-/* #banner{
-    display: flex;
-  justify-content: center;
-  
-  background-position: center;
-  background-size: cover;
-  width: 100%;
-  height: 500px; */
-
 #sobre_nos p{
     width: 700px;
     color: rgb(0, 0, 0);
@@ -438,101 +428,134 @@ border-bottom: 3px solid gray;
   }
 } 
 @media (max-width: 500px) {
-  #comprar{
+  #comprar {
     background-color: #ffffff;
-      display: flex;
-      align-items: center;
-      padding-top: 20px;
-      justify-content: center;
-      
-  }
-  .carrinho{
-    width:400px;
-    align-items: center;
-
-  }
-  .area_carrinho{
-   margin-bottom: 10px;
-    justify-content: baseline;
-    align-items: center;
-    width: 405px;
-  }
-  .itens_carrinho{
-    justify-content: center;
-   align-items: center;
-  }
-  .tabela_carrinho{
-   
     display: flex;
-  margin: 0px;
-  width: 10%;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+    flex-direction: column; /* Adiciona flex-direction para garantir que os itens fiquem empilhados */
   }
-  
-   tr td{
+
+  .carrinho {
+    width: 100%; /* Usa 100% da largura disponível */
+    max-width: 400px; /* Limita a largura para não ficar muito largo */
+    align-items: center;
+  }
+
+  .area_carrinho {
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 405px; /* Garante que não ultrapasse a largura do container */
+    justify-content: flex-start; /* Ajuste para melhor alinhamento */
+  }
+
+  .itens_carrinho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em linhas menores */
+  }
+
+  .tabela_carrinho {
+    display: flex;
+    flex-direction: column; /* Ajuste para garantir que as células se alinhem corretamente */
+    margin: 0;
+    width: 100%; /* Ajusta a largura */
+  }
+
+  tr td {
     padding: 5px;
-    font-size: 18px
+    font-size: 16px; /* Tamanho de fonte um pouco menor para telas pequenas */
   }
-  .titulo_carrinho{
-    font-size: 30px;
-    border-radius: 0px;
+
+  .titulo_carrinho {
+    font-size: 24px; /* Diminui um pouco o tamanho da fonte para telas menores */
+    border-radius: 0;
   }
+
   nav .active a,
-nav a:hover{
-   border-bottom: 6px solid #c25c36;
-   color: #013d61;
-}
-  nav a{
-    font-size: 18px;
- }
-  .logo h1{
-    color: white;
-    font-size: 30px;
-  }
-  .logo h2{
+  nav a:hover {
+    border-bottom: 6px solid #c25c36;
     color: #013d61;
-    font-size: 30px;
   }
-  header{
+
+  nav a {
+    font-size: 16px; /* Ajusta a fonte para um tamanho mais adequado */
+  }
+
+  .logo h1 {
+    color: white;
+    font-size: 24px; /* Tamanho de fonte reduzido */
+  }
+
+  .logo h2 {
+    color: #013d61;
+    font-size: 24px; /* Tamanho de fonte ajustado */
+  }
+
+  header {
     height: 90px;
-}
-.produtos{
-  background-color:#ffffff;
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
- max-width: 800px;
+  }
 
-}
-.produtos div{
-  padding: 10px;
-width: 210px;
-height: 370px;
-margin-bottom: 0px;
-margin-top: 70px;
-text-align: center;
-}
-.produtos img{
+  .produtos {
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px; /* Menor espaçamento entre os produtos */
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .produtos div {
+    padding: 10px;
+    height: 80%;
+    width: 100%; /* Largura ajustada para que o conteúdo se ajuste */
+    max-width: 210px; /* Limita a largura dos produtos */
+    margin-top: 20px;
+    text-align: center;
+    border-radius:0px; /* Pequeno arredondamento nos cantos */
+  }
+
+  .produtos img {
+    border-radius: 0px; /* Arredondamento nas imagens */
+    width: 80%; /* Garante que a imagem ocupe toda a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .card {
+    border-radius: 0px; /* Arredondamento nas bordas do card */
+  }
+
+  .valor_inteiro,
+  .valor_desconto {
+    font-size: 18px; /* Ajusta o tamanho das fontes */
+  }
+
+  .card p {
+    font-size: 16px; /* Tamanho reduzido para melhorar a legibilidade */
+    margin-bottom: 0px;
+  }
+  .card h1{
+    font-size: 18px;
+
+  }
+
+  #some_mobile {
+    display: none; /* Torna o elemento visível em telas pequenas */
+  }
+  .total_pedido h2{
+    font-size: 18px;
+  }
+  .btn_finalizar{
+  padding: 11px;
   border-radius: 0px;
-  width: 170px;
-}
-/* .produtos img:hover{
-transform: scale(1.05);
-} */
-.card{
-border-radius: 0px;
-
-}
-
-.valor_inteiro{
-font-size: 20px;
-}
-.valor_desconto{
-font-size: 20px;
-}
-.card p{
-font-size: 18px;
-}
-#some_mobile{
-  display: none;
-}
+  margin-bottom: 10px;
+   font-weight: bolder;
+   cursor: pointer;
+  }
+  #mapa h1{
+    font-size: 22px;
+    border-bottom: 1px solid;
+  }
 }
