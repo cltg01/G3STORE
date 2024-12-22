@@ -558,4 +558,7 @@ border-bottom: 3px solid gray;
     font-size: 22px;
     border-bottom: 1px solid;
   }
+  #contato{
+    display:none;
+  }
 }

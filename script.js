@@ -67,11 +67,21 @@ function enviarPedidoWhatsApp() {
 	let mensagem = "Olá, gostaria de finalizar meu pedido:\n\n";
 
 	// Simulação de itens (adicione sua lógica aqui)
-	mensagem += "- Produto A\n  Quantidade: 1\n  Total: R$50,00\n\n";
-	mensagem += "- Produto B\n  Quantidade: 2\n  Total: R$30,00\n\n";
+	const itensCarrinho = document.querySelectorAll("#carrinho tr");
+    itensCarrinho.forEach((item) => {
+        const nomeProduto = item.querySelector("td:nth-child(2)").innerText; // Nome do produto
+        const quantidade = item.querySelector("td:nth-child(4) p").innerText; // Quantidade
+        const totalProduto = item.querySelector("td:nth-child(6) span").innerText; // Total do produto
 
-	// Adicionar o total geral
-	mensagem += `Total do Pedido: R$80,00\n`;
+        if (parseInt(quantidade) > 0) {
+            mensagem += `- ${nomeProduto}\n  Quantidade: ${quantidade}\n  Total: R$${totalProduto}\n\n`;
+        }
+    });
+
+    // Adicionar o total geral
+    const totalGeral = document.getElementById("valorTotalCompra").innerText;
+    mensagem += `Total do Pedido: R$${totalGeral}\n`;
+
 
 	// Detectar se o dispositivo é móvel
 	const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
