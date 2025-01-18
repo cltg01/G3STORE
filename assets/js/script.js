@@ -197,3 +197,51 @@ function updatecart() {
     c('aside').style.left = '100vw'
    } 
 }
+function enviarPedidoWhatsApp() {
+    // Número de telefone para receber o pedido
+    const telefone = "5585991900162"; 
+
+    // Detalhes do pedido
+    let mensagem = "Olá, gostaria de finalizar meu pedido:\n\n";
+
+    // Variáveis para calcular o total geral
+    let subtotal = 0;
+
+    // Iterar pelos itens do carrinho
+    cart.forEach((cartItem) => {
+        const pizzaItem = pizzaJson.find((item) => item.id === cartItem.id);
+
+        // Obter os detalhes da pizza
+        const pizzaSizeName = cartItem.size === 0 ? 'P' : cartItem.size === 1 ? 'D' : 'C';
+        const pizzaName = `${pizzaItem.name} (${pizzaSizeName})`;
+        const quantidade = cartItem.qt;
+        const totalProduto = (pizzaItem.price * quantidade).toFixed(2);
+
+        // Adicionar os itens à mensagem
+        mensagem += `- ${pizzaName}\n  Quantidade: ${quantidade}\n  Total: R$${totalProduto}\n\n`;
+
+        // Calcular o subtotal
+        subtotal += pizzaItem.price * quantidade;
+    });
+
+    // Adicionar o total geral
+    const desconto = subtotal * 0.1;
+    const total = subtotal - desconto;
+    mensagem += `Subtotal: R$${subtotal.toFixed(2)}\n`;
+    mensagem += `Desconto: R$${desconto.toFixed(2)}\n`;
+    mensagem += `Total do Pedido: R$${total.toFixed(2)}\n`;
+
+    // Detectar se o dispositivo é móvel
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    // Definir a URL correta com base no dispositivo
+    const url = isMobile 
+        ? `whatsapp://send?phone=${telefone}&text=${encodeURIComponent(mensagem)}` // App em mobile
+        : `https://web.whatsapp.com/send?phone=${telefone}&text=${encodeURIComponent(mensagem)}`; // Web em desktop
+
+    // Abrir o link no WhatsApp
+    window.open(url, "_blank");
+}
+
+// Adicionar o evento ao botão de "Encerrar Pedido"
+c('.encerrar-pedido-button').addEventListener('click', enviarPedidoWhatsApp);
