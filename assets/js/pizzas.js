@@ -1,5 +1,5 @@
 let pizzaJson = [
-    {id:1, name:'Biblia Jumbo', img:'./assets/imagens/biblia1.png', price:20.19, sizes:['P', 'D', 'C'], description:'Bíblias exclusivas com capas personalizadas, perfeitas para presentear ou tornar seu momento de leitura ainda mais especial.'},
+    {id:1, name:'Biblia Jumbo', img:'/imagens/biblia1.png', price:20.19, sizes:['P', 'D', 'C'], description:'Bíblias exclusivas com capas personalizadas, perfeitas para presentear ou tornar seu momento de leitura ainda mais especial.'},
     {id:2, name:'Biblia Ilustrata', img:'./assets/imagens/biblia2.png', price:18.00, sizes:['P', 'D', 'C'], description:'Bíblias exclusivas com capas personalizadas, perfeitas para presentear ou tornar seu momento de leitura ainda mais especial.'},
     {id:3, name:'Bilia Personalizada', img:'./assets/imagens/biblia3.png', price:17.45, sizes:['P', 'D', 'C'], description:'Bíblias exclusivas com capas personalizadas, perfeitas para presentear ou tornar seu momento de leitura ainda mais especial.'},
     {id:4, name:'Planner 2025', img:'./assets/imagens/planner1.jpeg', price:19.77, sizes:['P', 'D', 'C'], description:'Planners organizados e elegantes, perfeitos para planejar sua rotina, metas e compromissos com praticidade.'},
