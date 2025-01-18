@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+        font-family:'Times New Roman', Times, serif;
+      }
+
+    #home{
+      display: flex;
+      height: 90px;
+      align-items: center;
+    }
+.container {
+    display: flex;
+    width: 80%;
+    align-items: center;
+  }
+.bg-manual{
+  background-color: #013d61;
+}
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo h1{
+    color: #c25c36;
+    font-size: 60px;
+  }
+  .logo h2{
+    color: white;
+    font-size: 60px;
+  }
+.centralizar{
+  justify-content: center;
+}
+
+.espacamento{
+  margin-right: 40px;
+}
+#sobrenos{
+  background-color: wheat;
+}
+.sobre-conteudo{
+ background-color: wheat;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+}
+.sobre-conteudo-esquerdo{
+  flex: 1;
+}
+.sobre-conteudo-esquerdo p{
+  line-height: 25px;
+ 
+}
+.sobre-conteudo-direito{
+  width: 400px;
+  text-align: center;
+}
+.sobre-conteudo-direito img{
+  gap: 300px;
+  width: 290px;
+  border-radius: 50%;
+  box-shadow: 0px 0px 14px #333;
+}
+#mapa{
+  width: 100%;
+  height: 500px;
+  
+}
+#localizacao{
+  margin-bottom: 50px;
+  padding: 30px;
+  width: 100%;
+  background-color: #ffffff;
+  
+}
+#mapa, iframe{
+  width: 100%;
+  height: 400px;
+}
+#mapa h1{ 
+ margin-bottom: 15px;
+ font-size: 40px;
+ margin-left: 180px;
+}
+.titulo-sobre{
+
+  border-bottom: 3px solid gray;
+  color: black;
+  font-size: 43px;
+  margin-bottom: 30px;
+}
+.rodape{
+  margin-top: px;
+  background-color: hsla(16, 56%, 49%, 0.882);
+  color: white;
+  font-size: 14px;
+  font-family: helvetica;
+
+}
+.rodape a{
+  text-decoration: none;
+  color: white;
+}
+.rodape p{
+  margin-bottom: 5px;
+}
+.rodape-div{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+  display: flex;
+  width: calc(100% / 4 - 20px);
+  padding: 10px;
+}
+.rodape span{
+  font-size: 20px;
+  color: white;
+}
+.rodape-direitos{
+  width: 100%;
+  background-color: black;
+  padding: 10px;
+  margin: 0px;
+  text-align: center;
+}
+.rodape-div-1-coluna a:hover, .rodape-div-1-coluna p:hover,
+.rodape-div-2-coluna a:hover, .rodape-div-2-coluna p:hover,
+.rodape-div-3-coluna a:hover, .rodape-div-3-coluna p:hover,
+.rodape-div-4-coluna a:hover, .rodape-div-4-coluna p:hover{
+  transform: scale(1.05);
+}
+.rodape-div-1-coluna a, .rodape-div-1-coluna p,
+.rodape-div-2-coluna a, .rodape-div-2-coluna p,
+.rodape-div-3-coluna a, .rodape-div-3-coluna p,
+.rodape-div-4-coluna a, .rodape-div-4-coluna p{
+  margin-top: 10px;}
+/* //responsividade do menu */
+@media (max-width: 530px){
+  .logo h1, .logo h2{
+    font-size: 27px;
+  }
+  header{
+    height: 80px;
+  }
+  #some_mobile{
+    display: none;
+  }
+  .menu-header nav ul {
+    align-items: flex-start;
+    width: 100%; /* Ocupa toda a largura */
+    background-color: #013d61; /* Cor de fundo do menu */
+    padding: 10px 0;
+    position: absolute; /* Faz o menu aparecer abaixo do header */
+    top: 60px; /* Alinha o menu logo abaixo do header */
+    left: 0;
+    z-index: 10; /* Garante que o menu fique acima de outros elementos */
+  
+  }
+  .navbar-toggler {
+    margin-left: auto; /* Empurra o toggler para o lado direito */
+  }
+  .espacamento{
+    background-color: #013d61;
+    margin: 40px;
+  }
+ 
+}
