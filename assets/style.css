@@ -174,4 +174,16 @@ header{
     margin: 40px;
   }
  
+ #localização{
+  width: 300px;
+ 
+ }
+ #mapa h1{
+  font-size: 20px;
+  margin-left: 8px;
+ }
+ #sobrenos{
+  display: none;
+ }
+}
 }
